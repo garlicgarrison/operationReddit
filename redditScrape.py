@@ -25,6 +25,7 @@ reddit = praw.Reddit(client_id = 'rbeXlfswKMdB5A',
                      user_agent = 'garlic'  )
 
 subreddit = reddit.subreddit('tifu')
+#5 refers to 5 top posts of the day
 top_python = subreddit.top('day', limit=5)
 
 #array of string
