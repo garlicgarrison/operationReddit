@@ -4,23 +4,23 @@ from skimage import transform as tf
 from moviepy.editor import *
 from moviepy.video.tools.drawing import color_gradient
 
-"""
-How to run script:
-pip install numpy
-pip install ffmpeg
-pip install moviepy
-pip install scikit-image
-pip install scipy
 
-install ImageMagick: 
-https://imagemagick.org/download/binaries/ImageMagick-7.0.9-21-Q16-x64-dll.exe
+# How to run script:
+# pip install numpy
+# pip install ffmpeg
+# pip install moviepy
+# pip install scikit-image
+# pip install scipy
 
-Navigate to C:\Users\kevin\AppData\Local\Programs\Python\Python38\Lib\site-packages\moviepy
-Then open the config_defaults file and replace the last line with:
-IMAGEMAGICK_BINARY = "C:\Program Files\ImageMagick-7.0.9-Q16\magick.exe"
+# install ImageMagick: 
+# https://imagemagick.org/download/binaries/ImageMagick-7.0.9-21-Q16-x64-dll.exe
 
-Now run the script.
-"""
+# Navigate to C:\Users\kevin\AppData\Local\Programs\Python\Python38\Lib\site-packages\moviepy
+# Then open the config_defaults file and replace the last line with:
+# IMAGEMAGICK_BINARY = "C:\Program Files\ImageMagick-7.0.9-Q16\magick.exe"
+
+# Now run the script.
+
 
 
 # RESOLUTION 
