@@ -12,7 +12,7 @@ from moviepy.video.tools.drawing import color_gradient
 # pip install scikit-image
 # pip install scipy
 
-# install ImageMagick: 
+# install ImageMagick and untick Install ffmpeg in the installer:
 # https://imagemagick.org/download/binaries/ImageMagick-7.0.9-21-Q16-x64-dll.exe
 
 # Navigate to C:\Users\kevin\AppData\Local\Programs\Python\Python38\Lib\site-packages\moviepy
