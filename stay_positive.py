@@ -32,21 +32,38 @@ moviesize = w,h
 
 #INSERT THE RAW TEXT (here: "A New Hope")
 
-txt = """TIFU sleeping on a flightThis morning I fell asleep on the plane. It was an early flight. Napping was inevitable. 
-Now, when it comes to sleeping on a plane, I always get insecure about my slack-jawed coma face. Hence, window seat. 
-I was able to comfortably doze off without facing the passengers next to me. 
-Whom, by the way, was a dad and his teenage daughter who only seem to speak German. 
 
-Cue fuck up. The moment my eyes opened, my face was on the daughter's boob while the dad was frantically shaking me awake. 
-The daughter, who also happened to be asleep, woke up the same time I did and immediately started ranting in German. 
-I backed as far away from her boobs as possible and profusely apologized to both of them. 
-If that wasn't awkward enough, I also felt compelled to offer the daughter a tissue to wipe away my drool from her chest. 
-The dad wasted no time making his daughter switch seats with him. She didn't seem too happy about that, but he didn't give a fuck. 
-His primary objective was to provide a barrier between my face and his daughter's breast.
+os.chdir(r"C:\Users\Jang's PC\Desktop\reddit tifu\tifu2020_Jan28\text")
+f = open("text0.txt", "r")
+story = f.read()
+f.close()
+story = story.replace('\n', ' ').replace('\r', ' ')
+sublist = []
 
-Needless to say, I remained wide awake for the rest of the flight. 
 
-TL:DR Fell asleep on the plane. Woke up on a boob. Triggered a German."""
+def split_string(str, limit, sep=" "):
+    words = str.split()
+    #if max(map(len, words)) > limit:
+        #raise ValueError("limit is too small")
+    res, part, others = [], words[0], words[1:]
+    for word in others:
+        if len(sep)+len(word) > limit-len(part):
+            res.append(part)
+            part = word
+        else:
+            part += sep+word
+    if part:
+        res.append(part)
+    return res
+
+
+sublist = split_string(str = story, limit = 64, sep=" ")
+   
+        
+txt = """"""
+for x in sublist:
+    txt = txt + x + '\n'
+    
 
 
 # Add blanks before and after text
@@ -125,7 +142,6 @@ time.sleep(5)
 #final_audio = CompositeAudioClip([leggo.mp4.audio, audiofile])
 final_clip = CompositeAudioClip(audiofile,no_sound)
 final_clip.write_videofile("leggo_sound.mp4",fps=18, codec='libx264')
-
 
 
 
