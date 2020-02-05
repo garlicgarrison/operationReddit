@@ -10,7 +10,8 @@ month = date.strftime("%b")
 day = str(date.strftime("%d"))
 
 #creates directory of the day with the posts
-path = r"C:\Users\Jang's PC\Desktop\reddit tifu"
+#You must create this yourself
+path = r"C:\Users\kevin\Desktop\reddit"
 os.chdir(path)
 try:
     os.mkdir('tifu' + year + '_' + month + day)
@@ -71,12 +72,3 @@ for x in range(len(plaintxt)):
     wr = open('text' + str(x) + '.txt', "w+")
     wr.write(plaintxt[x] + '\n' + '\n')
     wr.close()
-    
-    
-    
-    
-    
-    
-    
-    
-    
