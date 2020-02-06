@@ -19,11 +19,15 @@ except OSError:
     print("Creation of the directory failed")
 
 #accessing the api, subreddit, and setting how many
-reddit = praw.Reddit(client_id = 'rbeXlfswKMdB5A',
-                     client_secret = 'RsvgD0vviZybBCWXF0IbzSz025E',
-                     username = 'CrypticStevenRSA',
-                     password = 'kijoonkijoon',
-                     user_agent = 'garlic'  )
+pw = input("Enter password: ")
+try:
+    reddit = praw.Reddit(client_id = 'rbeXlfswKMdB5A',
+                         client_secret = 'RsvgD0vviZybBCWXF0IbzSz025E',
+                         username = 'CrypticStevenRSA',
+                         password = pw,
+                         user_agent = 'garlic'  )
+except:
+    print("Password Incorrect")
 
 subreddit = reddit.subreddit('tifu')
 #5 refers to 5 top posts of the day
